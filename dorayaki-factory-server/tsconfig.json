@@ -1,0 +1,30 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "allowUnreachableCode": false,
+    "outDir": "build"
+  },
+  "include": ["**/*.ts", "**/*.js"],
+  "exclude": [
+    "node_modules/*",
+    "lint-staged.config.js",
+    ".eslintrc",
+    ".prettierrc",
+    "build/**/*"
+  ]
+}

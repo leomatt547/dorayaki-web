@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WeBaDut</title>
+    <link href="../css/dash.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script src="../script/dash-script.js"></script>
+    <script src="../script/logout.js"></script>
+    <div class="topnav">
+      <a class="active" href="../html/dash-index.html">Home</a>
+      <div class="rightnav" id="admin">
+        <!--a href="request-index.html" class="account"
+          ><img id="request" src="images/request.png"
+        /></a-->
+        <a href="riwayat-index.html" class="account"
+          ><img id="riwayat" src="images/riwayat.png"
+        /></a>
+        <a class="account" id="nama"></a>
+        <a href="javascript:{}" onclick="logout()" class="account"
+          ><img id="logout" src="images/logout.png"
+        /></a>
+      </div>
+    </div>
+    <h1 class="featured-products-title">Web Dorayaki</h1>
+    <div class="search-container">
+      <form id="search-form" action="../html/search-index.html">
+        <input
+          type="text"
+          placeholder="Cari Dorayaki lainnya di sini..."
+          name="search"
+        />
+        <a
+          href="javascript:{}"
+          onclick="document.getElementById('search-form').submit();"
+          ><img id="search" src="images/search.png"
+        /></a>
+      </form>
+    </div>
+    <h2 class="featured-products-subtitle"></h2>
+    <section class="featured-products"></section>
+    page: <span id="page"></span>
+    <button onclick="prevPage()" id="btn_prev">Prev</button>
+    <button onclick="nextPage()" id="btn_next">Next</button>
+  </body>
+</html>

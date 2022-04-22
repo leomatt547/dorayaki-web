@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeBaDut</title>
+    <link href="../css/tambah-item.css" type="text/css" rel="stylesheet" />
+    <script src="../script/logout.js"></script>
+    <script src="../script/ubah-item-script.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="../html/dash-index.html">Home</a>
+      <div class="rightnav" id="admin">
+        <a class="account" id="nama"></a>
+        <a href="javascript:{}" onclick="logout()" class="account"
+          ><img id="logout" src="images/logout.png"
+        /></a>
+      </div>
+    </div>
+    <h1 class="featured-products-title">Ubah Varian Dorayaki</h1>
+    <h2 class="featured-products-subtitle">Hanya khusus admin</h2>
+    <div class="col-sm-6 col-sm-offset-3">
+      <form onsubmit="return false">
+        <div id="name-group" class="form-group">
+          <label for="name">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Rasayaki"
+          />
+        </div>
+        <div id="description-group" class="form-group">
+          <label for="description">Deskripsi</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            name="description"
+            placeholder="Deskripsi Varian Dorayaki"
+          />
+        </div>
+        <div id="price-group" class="form-group">
+          <label for="price">Harga</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            placeholder="Masukkan Harga (dalam rupiah)"
+            min="0"
+            max="9999999999"
+          />
+        </div>
+        <div id="stock-group" class="form-group">
+          <label for="stock">Stok</label>
+          <input
+            type="number"
+            class="form-control"
+            id="stock"
+            name="stock"
+            placeholder="Masukkan Angka"
+            min="0"
+            max="9999999999"
+          />
+        </div>
+        <div id="gambarnya">
+          <img id="temp_gambar" style="width: 30%; height: auto" />
+        </div>
+        <div id="image-group" class="form-group">
+          <label for="image">Ubah Gambar</label>
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+            name="image"
+            accept="image/*"
+            onchange="previewFile()"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success" onclick="postData()">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

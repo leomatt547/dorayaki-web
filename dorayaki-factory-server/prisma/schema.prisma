@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  nama     String
+}
+
+model BahanBaku {
+  id   Int    @id @default(autoincrement())
+  nama String
+  stok Int
+
+
+  bahan Bahan[]
+
+  @@map("bahan")
+}
+
+model Dorayaki {
+  id   Int    @id @default(autoincrement())
+  nama String @unique
+  photo String @default("default.jpg")
+
+  bahan Bahan[] @relation
+
+  @@map("dorayaki")
+}
+
+//resepId dan bahanId jangan ada default krn reference
+model Bahan {
+  jumlah      Int        @default(0)
+  dorayaki    Dorayaki  @relation(fields: [dorayakiId], references: [id])
+  dorayakiId  Int
+  bahanBaku   BahanBaku @relation(fields: [bahanBakuId], references: [id])
+  bahanBakuId Int
+
+  @@id([dorayakiId, bahanBakuId])
+  @@map("bahan_di_resep")
+}
+
+enum Status {
+  ACCEPTED
+  WAITING
+  REJECTED
+}
+
+model Request {
+  id          Int      @id @default(autoincrement())
+  ip          String
+  endpoint    String
+  id_dorayaki Int
+  stok        Int
+  username    String
+  timestamp   DateTime @default(now())
+  status      Status   @default(WAITING)
+
+  @@map("request")
+}
+
+model LogRequest {
+  id        Int      @id @default(autoincrement())
+  ip        String
+  endpoint  String
+  timestamp DateTime @default(now())
+
+  @@map("log_req")
+}

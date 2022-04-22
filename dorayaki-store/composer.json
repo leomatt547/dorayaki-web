@@ -1,0 +1,8 @@
+{
+    "name": "alvinw/tugas-besar-1",
+    "description": "Tugas besar 1 Web Based Application Development WeBaDut",
+    "require": {
+        "firebase/php-jwt": "^5.4",
+        "vlucas/phpdotenv": "^5.3"
+    }
+}

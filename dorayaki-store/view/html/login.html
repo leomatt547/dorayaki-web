@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WeBaDut</title>
+    <link href="../css/pages.css" type="text/css" rel="stylesheet" />
+    <link href="../css/dash.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script type="text/javascript" src="../script/auth-script.js"></script>
+    <div class="topnav">
+      <a class="active" href="../html/register.html">Register</a>
+    </div>
+    <h1 class="featured-products-title">Web Dorayaki</h1>
+    <h2 class="featured-products-subtitle"></h2>
+    <section class="signup-form">
+      <h2>Login</h2>
+      <form id="authForm" onsubmit="return false">
+        <input type="text" id="uname" placeholder="Username" /> <br />
+        <input type="password" id="pwd" placeholder="Password" /> <br />
+        <button type="submit" id="submit" onclick="login()">Login</button>
+      </form>
+      <div id="error"></div>
+    </section>
+  </body>
+</html>

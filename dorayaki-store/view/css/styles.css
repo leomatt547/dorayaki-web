@@ -1,0 +1,204 @@
+html,
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* Positions */
+.top {
+  top: 0;
+}
+.right {
+  float: right !important;
+}
+.left {
+  float: left !important;
+}
+
+/* Object Position */
+.display-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.display-topleft {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.display-topright {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.display-bottomleft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.display-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.display-container {
+  position: relative;
+}
+
+/*Specific property*/
+.navbar {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+  color: white;
+}
+.navbar-item {
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.normal-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.normal-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.normal-button:hover {
+  color: #000 !important;
+  background-color: #ccc !important;
+}
+
+/* Reusable property */
+
+.padding {
+  padding: 8px 16px;
+}
+.padding-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.padding-left-32 {
+  padding-left: 32px;
+}
+
+.margin-equal {
+  margin: 8px 8px 8px 8px;
+}
+.margin {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.margin-right {
+  margin-right: 20px;
+}
+.margin-left {
+  margin-left: 20px;
+}
+.margin-bottom {
+  margin-bottom: 16px;
+}
+.no-margin {
+  margin: 0;
+}
+
+/* Colors */
+.black {
+  color: black;
+}
+.white {
+  color: white;
+}
+.bg-soft-red {
+  background-color:rgb(247, 95, 95)
+}
+.bg-green {
+  background-color:rgb(107, 209, 133)
+}
+.bg-black {
+  background-color: black;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-grey {
+  background-color: grey;
+}
+.opaque {
+  opacity: 0.75;
+}
+span.shadow {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.329);
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Font Properties */
+.wide {
+  letter-spacing: 4px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.text-24 {
+  font-size: 24px;
+}
+
+

@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:8.0
+    env_file: .env
+    ports:
+      - '${DB_PORT}:${DB_PORT}'
+    networks:
+      - app-network
+    environment:
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}'
+      - MYSQL_DATABASE=${DB_DATABASE}'
+    volumes:
+      - app-db:/var/lib/mysql
+
+  web:
+    build: .
+    depends_on:
+      - db
+    container_name: dorayaki-factory-server
+    networks:
+      - app-network
+    env_file: .env
+    ports:
+      - '${PORT}:${PORT}'
+    environment:
+      - PORT=${PORT}
+      - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+      - REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
+      - SHADOW_DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@db/${DB_DATABASE}'
+    volumes:
+      - dorayaki-factory-server:/dorayaki-factory-server
+
+volumes:
+  app-db:
+  be-anmategra:
+
+networks:
+  app-network:

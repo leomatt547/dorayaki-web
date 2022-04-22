@@ -1,0 +1,91 @@
+@import url("index.css");
+
+@media (max-width: 1000px) {
+  .category-item {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .category-item {
+    min-width: 100%;
+  }
+}
+
+.featured-products {
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-products-title {
+  text-align: center;
+}
+
+.featured-products-subtitle {
+  text-align: center;
+}
+
+.featured-product-item {
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+
+  flex-direction: row;
+}
+
+.featured-product-item-image {
+  width: 30%;
+  object-fit: fill;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+}
+
+.featured-product-item .info > .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.featured-product-item .info > .deskripsi > .description {
+  color: #666;
+  margin-bottom: 3%;
+}
+
+.featured-product-item .info > #deskripsinya > .description {
+  color: #666;
+  margin-bottom: 3%;
+}
+
+.featured-product-item .info > .deskripsi > .description-title {
+  color: #666;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.featured-product-item .info > .price {
+  font-style: italic;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-count-number {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.item-count-button {
+}
+
+.submit-button {
+  margin-left: 30px;
+}

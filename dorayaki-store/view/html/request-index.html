@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WeBaDut</title>
+    <link href="../css/riwayat.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../script/logout.js"></script>
+    <script src="../script/request-script.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="../html/dash-index.html">Home</a>
+      <div class="rightnav" id="admin">
+        <a class="account" id="nama"></a>
+        <a href="javascript:{}" onclick="logout()" class="account"
+          ><img id="logout" src="images/logout.png"
+        /></a>
+      </div>
+    </div>
+    <h1 class="featured-products-title">Web Dorayaki</h1>
+    <div class="featured-products-subtitle"></div>
+    <section class="featured-products"></section>
+    page: <span id="page"></span>
+    <button onclick="prevPage()" id="btn_prev">Prev</button>
+    <button onclick="nextPage()" id="btn_next">Next</button>
+  </body>
+</html>
